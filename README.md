@@ -1,17 +1,17 @@
 # project-exam-2
 Holidaze booking site, final project
 
-##Start project on local dev server
+## Start project on local dev server
 ```
 npm start
 ```
 
-##Build development code
+## Build development code
 ```
 npm run build:dev
 ```
 
-##Build production code
+## Build production code
 ```
 npm run build:prod
 ```
