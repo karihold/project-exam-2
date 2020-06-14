@@ -1,0 +1,70 @@
+.searchbar {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 1280px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  .date-picker__button {
+    color: $black;
+    background-color: $white;
+    height: 100%;
+    @include search-section;
+
+    @include smaller-than(1109px) {
+      background-color: transparent;
+
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0;
+    }
+  }
+
+  @include smaller-than(1109px) {
+    flex-flow: column;
+  }
+}
+
+.searchbar__price-input {
+  color: $black;
+  background-color: $white;
+  @include search-section;
+  width: 100px;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  @include smaller-than(1109px) {
+    width: 100%;
+
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+}
+
+.search-button {
+  background-color: $burgundy;
+  color: $white;
+  font-family: $title-font;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+
+  @include search-section;
+
+  border: 2px solid $burgundy;
+  &:hover {
+    color: $burgundy;
+    background-color: $white;
+    border: 2px solid $burgundy;
+  }
+
+  @include smaller-than(1109px) {
+    border-radius: 8px;
+  }
+}

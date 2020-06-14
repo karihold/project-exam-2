@@ -1,0 +1,13 @@
+.search-results {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include smaller-than(920px) {
+    justify-content: space-between;
+  }
+
+  @include smaller-than(768px) {
+    flex-flow: column;
+    align-items: center;
+  }
+}

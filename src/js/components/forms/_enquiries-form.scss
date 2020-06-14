@@ -1,0 +1,188 @@
+//hotel-specific page reserve form
+
+.hotelpage-enquiry-form {
+  flex-grow: 1;
+
+  margin-left: 40px;
+  margin-bottom: 40px;
+  max-width: 600px;
+
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  font-family: $bodytext-font;
+  font-size: $bodytext-fontsize;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  padding: 16px 40px;
+
+  @include smaller-than(1340px) {
+    margin-left: 0;
+    max-width: 825px;
+    width: 100%;
+  }
+
+  @include smaller-than(540px) {
+    padding: 10px 14px;
+  }
+
+  .guests__button {
+    font-family: $bodytext-font;
+    font-size: $bodytext-fontsize;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid $black;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .guests {
+    position: relative;
+    width: 100%;
+  }
+
+  .guest-counter {
+    position: absolute;
+    background-color: $white;
+    padding: 10px;
+    list-style: none;
+    font-family: $bodytext-font;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+    z-index: 100;
+    position: absolute;
+  }
+
+  .increment-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .date-picker {
+    width: 100%;
+    background-color: $white;
+  }
+
+  .date-picker__button {
+    background-color: #fff;
+    font-size: $bodytext-fontsize;
+    font-family: $title-font;
+    padding: 10px 20px;
+    border: 1px solid $black;
+    width: 100%;
+    border-top: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-self: center;
+  }
+
+  .date-picker__divider {
+    width: 1px;
+    height: 45px;
+    display: inline-block;
+    background-color: #272727;
+    margin: -11px 14px;
+  }
+}
+
+.enquirie-input {
+  width: 100%;
+  position: relative;
+  .error-message {
+    position: absolute;
+    top: 10px;
+  }
+
+  &:first-of-type {
+    > input {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom: none;
+    }
+  }
+
+  > input {
+    border: 1px solid $black;
+    //  margin-left: 8px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.special-price {
+  color: $yellow;
+}
+
+#enquiries-name {
+  font-size: $bodytext-fontsize;
+}
+
+#enquiries-email {
+  font-size: $bodytext-fontsize;
+}
+
+.enquiries-table {
+  text-align: left;
+  margin: 0 auto 20px;
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    td:last-of-type {
+      text-align: right;
+    }
+  }
+  tfoot {
+    border-top: 1px solid $black;
+    margin-top: 20px;
+  }
+}
+
+.reserve-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  outline: 0;
+  padding: 12px;
+  color: $white;
+  background-color: $pink;
+  border: 1px solid $pink;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 29px;
+  font-family: $title-font;
+  &:hover {
+    color: $pink;
+    background-color: $white;
+    border: 1px solid $pink;
+  }
+  @media screen and (max-width: 1082px) {
+    font-size: 20px;
+  }
+
+  @include smaller-than(640px) {
+    width: 100%;
+  }
+}
+
+.reserve-price {
+  margin-bottom: 20px;
+}

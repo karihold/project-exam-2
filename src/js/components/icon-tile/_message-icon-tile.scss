@@ -1,0 +1,59 @@
+.message-info-tile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 40px;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &:nth-child(2n) {
+    margin: 0 20px;
+  }
+
+  @include smaller-than(930px) {
+    padding: 20px;
+  }
+}
+
+.message-info-tile--pink {
+  background-color: $pink;
+}
+
+.message-info-tile--brown {
+  background-color: $brown;
+}
+
+.message-info-tile--yellow {
+  background-color: $light-yellow;
+}
+
+.message-info-tile__h2 {
+  font-family: $title-font;
+  font-size: 22px;
+
+  @include smaller-than(680px) {
+    font-size: 18px;
+  }
+}
+
+.message-info-tile__text {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+}
+
+.icon--enquiries {
+  background-image: url('../assets/icons-and-logo/enqiries-icon.svg');
+}
+.icon--messages {
+  background-image: url('../assets/icons-and-logo/message-icon.svg');
+}
+.icon--new-enquiries {
+  background-image: url('../assets/icons-and-logo/new-enquiries-icon.svg');
+}

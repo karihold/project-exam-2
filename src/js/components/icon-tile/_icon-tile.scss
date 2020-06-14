@@ -1,0 +1,60 @@
+.icon-tile {
+  $dimensions: 142px;
+  width: $dimensions;
+  height: $dimensions;
+  padding: 30px;
+  border: 1px solid $grey;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include smaller-than(540px) {
+    $medium-dimensions: 100px;
+    width: $medium-dimensions;
+    height: $medium-dimensions;
+  }
+
+  @include smaller-than(340px) {
+    $medium-dimensions: 90px;
+    width: $medium-dimensions;
+    height: $medium-dimensions;
+  }
+}
+
+@mixin icon-base($icon-name) {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../assets/icons-and-logo/#{$icon-name}-icon.svg');
+}
+
+.icon-tile__icon-bed {
+  @include icon-base('bed');
+}
+
+.icon-tile__icon-wifi {
+  @include icon-base('wifi');
+}
+
+.icon-tile__icon-cutlery {
+  @include icon-base('food');
+}
+
+.icon-tile__label {
+  font-size: 25px;
+  margin-bottom: 10px;
+  font-family: $bodytext-font;
+
+  @include smaller-than(540px) {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  @include smaller-than(340px) {
+    font-size: 12px;
+  }
+}

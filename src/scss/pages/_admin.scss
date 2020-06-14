@@ -1,0 +1,23 @@
+.admin-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  @include smaller-than(756px) {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.admin-overview-section {
+  @include smaller-than(756px) {
+    width: 100%;
+  }
+}
+
+.admin-helpers-section {
+  @include smaller-than(756px) {
+    width: 100%;
+    max-width: 420px;
+  }
+}

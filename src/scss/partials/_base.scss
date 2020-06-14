@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app-root {
+  display: flex;
+  flex-flow: column;
+
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+main {
+  $page-margin: 20px;
+  position: relative;
+  flex-grow: 2;
+  max-width: $page-max-width;
+  margin: 30px auto 40px;
+
+  @include smaller-than($page-max-width + $page-margin) {
+    margin: 30px $page-margin 40px;
+  }
+
+  @include smaller-than(540px) {
+    margin: 20px 10px 30px;
+  }
+}
+
+.main--row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.main--column {
+  display: flex;
+  flex-flow: column;
+}
+
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}

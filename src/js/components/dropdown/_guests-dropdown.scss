@@ -1,0 +1,73 @@
+//Searchbar specific styles
+.searchbar {
+  .guests-dropdown {
+    background-color: $white;
+    position: relative;
+    width: 200px;
+
+    @include smaller-than(1109px) {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+  }
+
+  .guests-dropdown__button {
+    @include search-section;
+    color: $black;
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+
+    @include smaller-than(1109px) {
+      width: 100%;
+
+      border-radius: 8px 8px 0 0;
+
+      border-left: none;
+    }
+  }
+
+  @include smaller-than(1109px) {
+    flex-flow: column;
+  }
+}
+
+//Enquiry form specific styles
+.hotelpage-enquiry-form {
+  .guests-dropdown {
+    position: relative;
+    width: 100%;
+  }
+
+  .guests-dropdown__button {
+    font-family: $bodytext-font;
+    font-size: $bodytext-fontsize;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid $black;
+    border-top: none;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .guests-dropdown-container {
+    background-color: #fff;
+    border: 1px solid $black;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    bottom: 11px;
+    transform: translateY(100%);
+  }
+}
+
+//general styles
+.guests-dropdown-container {
+  position: absolute;
+  background-color: $white;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 100;
+}

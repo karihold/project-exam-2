@@ -1,0 +1,35 @@
+.increment-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.increment-counter-container {
+  min-width: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.increment__count {
+  font-family: $bodytext-font;
+}
+
+.increment__button {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  font-family: $bodytext-font;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid $black;
+}

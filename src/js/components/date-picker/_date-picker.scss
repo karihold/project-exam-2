@@ -1,0 +1,68 @@
+.searchbar {
+  .date-picker__divider {
+    background-image: url('../assets/icons-and-logo/arrow-icon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 30px;
+    height: 26px;
+    margin: 0 6px -5px;
+
+    display: inline-block;
+
+    @include smaller-than(1109px) {
+      display: none;
+    }
+  }
+
+  .date-picker__button {
+    color: $black;
+    background-color: $white;
+    height: 100%;
+    width: 100%;
+    @include search-section;
+
+    @include smaller-than(1109px) {
+      border-radius: 8px;
+
+      margin-bottom: 20px;
+    }
+  }
+
+  .date-picker__date-label {
+    background-image: url('../assets/icons-and-logo/calendar-icon.svg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    padding-left: 40px;
+
+    @include smaller-than(1109px) {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 10px 20px;
+      background-image: none;
+      max-width: 45%;
+      width: 100%;
+    }
+  }
+}
+
+.date-picker {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.DayPicker {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 46px;
+  z-index: 100;
+}
+
+.DayPicker-Months {
+  background-color: $white;
+  font-family: $bodytext-font;
+}

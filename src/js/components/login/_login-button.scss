@@ -1,0 +1,31 @@
+.login-section {
+  flex-shrink: 0;
+}
+
+.login-frontpage-item {
+  background-color: rgba($color: $black, $alpha: 0.7);
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  color: $white;
+  font-size: 18px;
+  font-family: 'montserrat';
+}
+
+.login-frontpage-item:hover {
+  color: $yellow;
+}
+
+.signup-frontpage-item {
+  background-color: rgba($color: $black, $alpha: 0.9);
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+  color: $yellow;
+  font-size: 18px;
+  font-family: 'montserrat';
+}
+
+.signup-frontpage-item:hover {
+  color: $white;
+}

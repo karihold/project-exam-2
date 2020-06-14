@@ -1,0 +1,40 @@
+@import './partials/fonts';
+@import './partials/variables';
+@import './partials/breakpoints';
+@import './partials/mixins';
+@import './partials/banner';
+@import './partials/cards';
+@import './partials/enquirymodal';
+@import './partials/login-modal';
+@import './partials/reserve-form';
+@import './partials/base';
+
+//pages
+@import './pages/contact';
+@import './pages/admin';
+@import './pages/admin-messages';
+@import './pages/hotel';
+@import './pages/search';
+
+//Components;
+@import '../js/components/inputs/form/increment';
+@import '../js/components/dropdown/guests-dropdown';
+@import '../js/components/header/header';
+@import '../js/components/footer/footer';
+@import '../js/components/modal/modal';
+@import '../js/components/login/login-button';
+@import '../js/components/search/search';
+@import '../js/components/date-picker/date-picker';
+@import '../js/components/cards/flip-card';
+@import '../js/components/cards/card';
+@import '../js/components/forms/enquiries-form';
+@import '../js/components/icon-tile/icon-tile';
+@import '../js/components/forms/form';
+@import '../js/components/inputs/form/input';
+@import '../js/components/admin/overview-panel';
+@import '../js/components/admin/admin-message-item';
+@import '../js/components/admin/create-establishment';
+@import '../js/components/admin/admin-chart';
+@import '../js/components/icon-tile/message-icon-tile';
+@import '../js/components/icon-tile/admin-icon-tile';
+@import '../js/components/inputs/search/autocomplete-search';

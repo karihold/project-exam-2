@@ -1,0 +1,51 @@
+.banner-image-buttons {
+  text-align: center;
+  position: absolute;
+  top: 89%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include smaller-than(640px) {
+    flex-flow: row nowrap;
+    width: 100%;
+  }
+}
+
+.banner__button {
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: $white;
+  background-color: $burgundy;
+  font-family: $title-font;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 20px;
+  &:hover {
+    color: $burgundy;
+    background-color: $white;
+    border: 1px solid $burgundy;
+  }
+  @media (max-width: 440px) {
+    margin-bottom: 10px;
+  }
+}
+
+.banner__button-inverted {
+  border: none;
+  outline: 0;
+  padding: 8px;
+  color: $yellow;
+  background-color: $black;
+  font-family: $title-font;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    color: $black;
+    background-color: $white;
+    border: 1px solid $black;
+  }
+  @media (max-width: 440px) {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,147 @@
+.form {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-family: $bodytext-font;
+  font-size: 15px;
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  position: relative;
+
+  @include smaller-than(640px) {
+    padding: 12px 14px;
+
+    margin: 0 14px;
+  }
+
+  .sign-up__button {
+    margin-top: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    @include smaller-than(640px) {
+      top: 0;
+      right: 0;
+      background: transparent;
+    }
+  }
+}
+
+.form--large {
+  max-width: 825px;
+  width: 100%;
+  flex-shrink: 1;
+
+  @include smaller-than(1000px) {
+    max-width: 100%;
+  }
+}
+
+.form--grow {
+  flex-grow: 0.5;
+}
+
+.form__h2 {
+  font-family: $title-font;
+  font-size: $title-fontsize;
+  margin-bottom: 20px;
+
+  @include smaller-than(640px) {
+    font-size: 20px;
+  }
+}
+
+.form-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 60%;
+
+  @include smaller-than(640px) {
+    flex-flow: column;
+    width: 100%;
+  }
+}
+.form__button {
+  margin-top: 20px;
+  color: $white;
+  background-color: $pink;
+  border: 2px solid $pink;
+  border-radius: 25px;
+  padding: 3px 25px 3px 25px;
+  font-size: 22px;
+  font-family: $title-font;
+  &:hover {
+    color: $pink;
+    background-color: $white;
+    border: 2px solid $pink;
+  }
+
+  @include smaller-than(640px) {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.form__cancel-button {
+  margin-top: 20px;
+  color: $pink;
+  background-color: $white;
+  border: 2px solid $pink;
+  border-radius: 25px;
+  padding: 3px 20px 3px 20px;
+  font-size: 22px;
+  font-family: $title-font;
+  &:hover {
+    color: $white;
+    background-color: $pink;
+    border: 1px solid $pink;
+  }
+
+  @include smaller-than(640px) {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
+  }
+}
+
+.sign-up__button {
+  font-family: $bodytext-font;
+  font-size: $bodytext-fontsize;
+  color: $black;
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 3px 20px 3px 20px;
+  &:hover {
+    color: $yellow;
+    background-color: black;
+  }
+}
+
+.contact-message {
+  width: 100%;
+}
+.contact-page-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+
+  max-width: 1600px;
+  margin: 40px auto;
+}
+
+.error-message {
+  color: red;
+  font-family: $bodytext-font;
+  font-size: 12px;
+  margin-left: 20px;
+}

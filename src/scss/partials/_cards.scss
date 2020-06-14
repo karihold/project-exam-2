@@ -1,0 +1,43 @@
+.hosts-line {
+  @include card-line;
+}
+.hosts-card {
+  @include cards;
+
+  img {
+    @include card-image;
+  }
+
+  a {
+    @include card-button;
+
+    @include card-hover;
+  }
+}
+
+.help-line {
+  @include card-line;
+}
+
+.help-card {
+  @include cards;
+  margin: 30px;
+  height: 500px;
+  background-color: $pink;
+  text-decoration: none;
+  font-size: $title-fontsize;
+  font-family: $title-font;
+  color: $white;
+  border: 2px solid $pink;
+  &:hover {
+    background-color: $white;
+    color: $pink;
+    border: 2px solid $pink;
+  }
+
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

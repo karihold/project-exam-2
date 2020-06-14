@@ -1,0 +1,48 @@
+.contact-main {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  @include smaller-than(1000px) {
+    flex-flow: column;
+  }
+}
+
+.faqs {
+  margin-left: 20px;
+
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+
+  padding: 20px 40px;
+
+  @include smaller-than(1000px) {
+    max-width: 100%;
+    margin: 20px 0 auto;
+    padding: 12px 14px;
+  }
+
+  @include smaller-than(540px) {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+}
+
+.faqs__h2 {
+  margin-top: 20px;
+  font-family: $title-font;
+  font-size: $title-fontsize;
+  text-align: center;
+}
+
+.faqs__p {
+  line-height: 1.7;
+  font-size: $bodytext-fontsize;
+  font-family: $bodytext-font;
+
+  @include smaller-than(540px) {
+    font-size: 16px;
+  }
+}

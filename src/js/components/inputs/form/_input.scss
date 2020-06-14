@@ -1,0 +1,87 @@
+.form__input {
+  font-size: 15px;
+  font-family: $bodytext-font;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-right: 40px;
+  margin-left: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  input {
+    margin-top: 8px;
+    width: 100%;
+    border: 2px solid $pink;
+    background-color: $white;
+    font-family: $bodytext-font;
+    font-size: 22px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    -webkit-appearance: none;
+
+    @include smaller-than(540px) {
+      font-size: 14px;
+    }
+  }
+
+  @include smaller-than(640px) {
+    margin-bottom: 10px;
+  }
+}
+
+.form__checkbox {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  input {
+    margin-right: 8px;
+  }
+}
+
+.form-input--half-width {
+  font-size: 22px;
+  font-family: $bodytext-font;
+  width: 50%;
+  text-align: left;
+  margin-bottom: 20px;
+
+  input {
+    margin-top: 8px;
+    width: 100%;
+    border: 3px solid $burgundy;
+    background-color: $white;
+    font-family: $bodytext-font;
+    font-size: 27px;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+}
+
+.form__message {
+  width: 100%;
+
+  textarea {
+    margin-top: 8px;
+    width: 100%;
+    border: 2px solid $pink;
+    background-color: $white;
+    font-family: $bodytext-font;
+    font-size: 22px;
+    padding: 60px 71px;
+    border-radius: 12px;
+    resize: none;
+
+    @include smaller-than(640px) {
+      height: 130px;
+      padding: 10px 14px;
+      font-size: 16px;
+    }
+  }
+}

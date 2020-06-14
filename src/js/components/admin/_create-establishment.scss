@@ -1,0 +1,150 @@
+.create-establishment-form {
+  max-width: $page-max-width;
+  margin: 40px auto;
+
+  @include smaller-than($page-max-width + 40px) {
+    margin: 40px 20px;
+  }
+}
+
+.cms-container {
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.cms-container--large {
+  width: 100%;
+  padding: 80px 20px;
+
+  justify-content: center;
+}
+
+.cms-label {
+  font-size: 19px;
+  font-family: $bodytext-font;
+  margin-left: 55px;
+  max-width: 200px;
+}
+
+.cms-label--large {
+  font-size: 50px;
+  width: 300px;
+}
+
+.add-button {
+  $dimensions: 50px;
+
+  width: $dimensions;
+  height: $dimensions;
+  font-size: 35px;
+  font-weight: lighter;
+  border-radius: 50%;
+  border: 2px solid $black;
+  cursor: pointer;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+.cms-input {
+  padding: 8px 16px;
+  //width: 300px;
+  flex-grow: 2;
+  font-size: 26px;
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+
+  border: 1px solid $black;
+
+  &:-internal-autofill-selected,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    background-color: #fff !important;
+  }
+
+  &:disabled {
+    border: 1px solid transparent;
+  }
+}
+
+.cms-number-input {
+  padding: 8px 16px;
+  //width: 300px;
+  flex-grow: 2;
+  font-size: 26px;
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+
+  border: 1px solid $black;
+
+  &:-internal-autofill-selected,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    background-color: #fff !important;
+  }
+
+  &:disabled {
+    border: 1px solid transparent;
+  }
+}
+
+.cms-checkbox {
+  $dimensions: 25px;
+
+  width: $dimensions;
+  height: $dimensions;
+
+  transition: 0.2s ease-in-out;
+
+  &.isChecked {
+    &:disabled {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    opacity: 0;
+  }
+}
+
+.cms-textarea {
+  padding: 8px 16px;
+
+  flex-grow: 2;
+  font-size: 26px;
+  transition: 0.2s ease-in-out;
+  background-color: transparent;
+
+  border: 1px solid $black;
+
+  resize: none;
+
+  &:-internal-autofill-selected,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    background-color: #fff !important;
+  }
+
+  &:disabled {
+    border: 1px solid transparent;
+  }
+}
+
+.create-establishment-button {
+  margin: 0 auto;
+  display: block;
+}

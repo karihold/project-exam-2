@@ -1,0 +1,16 @@
+.admin-chart-section {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  @include smaller-than(1380px) {
+    flex-flow: row nowrap;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @include smaller-than(900px) {
+    flex-flow: column;
+    width: 100%;
+  }
+}

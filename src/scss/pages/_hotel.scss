@@ -1,0 +1,145 @@
+.hotel__main-image {
+  margin-right: 20px;
+  border-radius: 5px;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+  @include smaller-than(768px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+}
+
+.hotel-images {
+  display: flex;
+  flex-flow: row nowrap;
+
+  margin-bottom: 20px;
+
+  @include smaller-than(768px) {
+    flex-flow: column;
+  }
+}
+
+.hotel__detail-image {
+  $gutter-size: 20px;
+  width: calc(50% - (#{$gutter-size} / 2));
+  margin-bottom: 20px;
+  border-radius: 5px;
+  max-height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+
+  &:nth-child(odd) {
+    margin-right: $gutter-size;
+  }
+
+  &:nth-child(3),
+  &:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  @include smaller-than(768px) {
+    $gutter-size: 14px;
+    width: calc(50% - (#{$gutter-size} / 2));
+    margin-bottom: $gutter-size;
+
+    &:nth-child(odd) {
+      margin-right: $gutter-size;
+    }
+  }
+}
+
+.hotel-description-container {
+  flex-shrink: 0;
+}
+
+.hotel-description {
+  font-family: $bodytext-font;
+  font-size: $bodytext-fontsize;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @include smaller-than(540px) {
+    font-size: 16px;
+  }
+}
+
+.hotel-description__p {
+  line-height: 2;
+
+  @include smaller-than(540px) {
+    margin-bottom: 16px;
+  }
+}
+
+.hotel-detail-images-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hotel-details-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  @include smaller-than(1340px) {
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.hotel-icon-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include smaller-than(1340px) {
+    margin-bottom: 20px;
+  }
+
+  @include smaller-than(900px) {
+    flex-flow: row wrap;
+  }
+}
+
+.hotel__host-button {
+  background-color: $light-yellow;
+  border: 2px solid $light-yellow;
+  border-radius: 25px;
+  color: $black;
+  font-size: 29px;
+  font-family: $bodytext-font;
+  padding: 8px 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: $white;
+    border: 2px solid $light-yellow;
+    color: $light-yellow;
+  }
+  @include smaller-than(900px) {
+    width: 100%;
+    max-width: 720px;
+    margin: 20px auto 0;
+  }
+
+  @include smaller-than(540px) {
+    font-size: 16px;
+  }
+}
+
+.hotel__host-image {
+  $dimensions: 83px;
+  width: $dimensions;
+  height: $dimensions;
+  border-radius: 50%;
+
+  @include smaller-than(900px) {
+    $dimensions: 125px;
+    width: $dimensions;
+    height: $dimensions;
+    margin: 20px auto 0;
+  }
+}

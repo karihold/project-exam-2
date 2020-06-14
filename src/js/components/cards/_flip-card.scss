@@ -1,0 +1,150 @@
+.flip-card {
+  background-color: transparent;
+
+  $card-side-margins: 15px;
+  $card-height: 340px;
+
+  height: $card-height;
+  width: calc((100% / 5) - (#{$card-side-margins * 2}));
+  max-width: 330px;
+  perspective: 1000px;
+  margin-left: $card-side-margins;
+  margin-right: $card-side-margins;
+  margin-bottom: 40px;
+  text-align: center;
+  cursor: pointer;
+
+  @include smaller-than(1500px) {
+    width: calc((100% / 4) - (#{$card-side-margins * 2}));
+  }
+  @include smaller-than(1100px) {
+    width: calc((100% / 3) - (#{$card-side-margins * 2}));
+  }
+
+  @include smaller-than(920px) {
+    $card-side-margins: 10px;
+    margin-left: $card-side-margins;
+    margin-right: $card-side-margins;
+    width: calc((100% / 2) - (#{$card-side-margins}));
+  }
+
+  @include smaller-than(768px) {
+    $card-side-margins: 10px;
+    margin-left: $card-side-margins;
+    margin-right: $card-side-margins;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  @include card-bottom-radius;
+}
+
+.flip-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include card-bottom-radius;
+}
+
+.flip-card__hotel-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background: $pink;
+  color: $white;
+  font-family: $title-font;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  backface-visibility: hidden;
+  @include card-bottom-radius;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  @include card-bottom-radius;
+}
+
+.flip-card-front {
+  background-color: $white;
+  color: $black;
+}
+
+.flip-card-back {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/images/background-card-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+  transform: rotateY(180deg);
+}
+
+.flip-card__price {
+  padding-top: 23px;
+  padding-bottom: 11px;
+  text-align: center;
+  font-size: $title-fontsize;
+  font-family: $title-font;
+  color: $yellow;
+}
+
+.flip-card-text-container {
+  padding: 10px 16px;
+}
+
+.flip-card__p {
+  font-size: 14px;
+  font-family: $bodytext-font;
+  text-align: left;
+  line-height: 1.2;
+  margin-left: 7px;
+  padding: 5px;
+}
+
+.flip-card__select-button {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  font-family: $title-font;
+  padding: 8px 16px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  outline: 0;
+  color: $black;
+  border: 1px solid $yellow;
+  background-color: $yellow;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+
+  transform: translateX(-50%);
+
+  &:hover {
+    color: $yellow;
+    background-color: $white;
+    border: 1px solid $yellow;
+  }
+}

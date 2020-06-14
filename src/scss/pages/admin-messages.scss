@@ -1,0 +1,94 @@
+.admin-messages-main {
+  display: flex;
+  flex-flow: row nowrap;
+
+  @include smaller-than(1080px) {
+    flex-flow: column;
+  }
+}
+
+.admin-messages {
+  flex-grow: 1;
+}
+
+.messages-container {
+  margin: 40px auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  font-family: $bodytext-font;
+  font-size: 15px;
+  padding: 40px 40px;
+  display: flex;
+  flex-flow: column;
+
+  @include smaller-than(768px) {
+    padding: 0;
+    box-shadow: none;
+  }
+}
+
+.messages-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include smaller-than(640px) {
+    flex-flow: column;
+
+    .message-info-tile {
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//Admin menu;
+.admin-menu {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-color: $black;
+  margin-right: 20px;
+  padding: 40px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+  @include smaller-than(1080px) {
+    flex-flow: row;
+    justify-content: space-between;
+    margin-right: 0;
+    padding: 15px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+
+  @include smaller-than(768px) {
+    flex-flow: row wrap;
+  }
+}
+.admin-menu-button {
+  font-size: 25px;
+  font-family: $title-font;
+  background-color: $black;
+  color: $white;
+  border: none;
+  line-height: 4;
+
+  @include smaller-than(1080px) {
+    line-height: 1;
+    margin-bottom: 8px;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &.active {
+    color: $light-yellow;
+  }
+  &:hover {
+    color: $yellow;
+  }
+}

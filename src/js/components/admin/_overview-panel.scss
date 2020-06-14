@@ -1,0 +1,48 @@
+@mixin article {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  padding: 40px 40px;
+  margin-bottom: 40px;
+}
+
+.overview-panel {
+  margin-bottom: 40px;
+
+  font-family: $bodytext-font;
+  font-size: 15px;
+  max-width: 640px;
+  width: 100%;
+
+  @include smaller-than(756px) {
+    max-width: 100%;
+  }
+}
+
+.overview__h2 {
+  font-family: $title-font;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.overview__link {
+  text-decoration: none;
+  color: $black;
+}
+
+.overview__ul {
+  background-color: $white;
+  padding: 40px 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.overview__li {
+  font-size: $bodytext-fontsize;
+  font-family: $bodytext-font;
+  line-height: 2;
+}
+
+.admin-login-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 40px auto;
+}
