@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "dayjs": "^1.8.26",
-    "highcharts": "^8.1.1",
+    "highcharts": "^9.0.0",
     "highcharts-react-official": "^3.0.0",
     "react": "^16.13.1",
     "react-day-picker": "^7.4.8",
